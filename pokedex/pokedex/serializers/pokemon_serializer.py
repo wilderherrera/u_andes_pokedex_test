@@ -20,12 +20,6 @@ class SpriteDetailSerializer(serializers.Serializer):
     back_shiny_female = serializers.URLField(allow_null=True, required=False)
 
 
-class SpriteOtherSerializer(serializers.Serializer):
-    dream_world = SpriteDetailSerializer()
-    home = SpriteDetailSerializer()
-    showdown = SpriteDetailSerializer()
-
-
 class SpritesSerializer(serializers.Serializer):
     back_default = serializers.URLField(allow_null=True)
     back_female = serializers.URLField(allow_null=True)
@@ -35,7 +29,6 @@ class SpritesSerializer(serializers.Serializer):
     front_female = serializers.URLField(allow_null=True)
     front_shiny = serializers.URLField(allow_null=True)
     front_shiny_female = serializers.URLField(allow_null=True)
-    other = SpriteOtherSerializer()
 
 
 class TypeSerializer(serializers.Serializer):
