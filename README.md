@@ -24,6 +24,7 @@ Features
 3. Navigate to the project directory:
 
    cd u_andes_pokedex_test
+   cd pokedex
 
 4. Create and activate a virtual environment:
 
@@ -59,11 +60,7 @@ Features
    python manage.py makemigrations
    python manage.py migrate
 
-8. Create a superuser (optional, for admin access):
-
-   python manage.py createsuperuser
-
-9. Run the development server:
+8. Run the development server:
 
    python manage.py runserver
 
