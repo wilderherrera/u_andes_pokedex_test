@@ -35,7 +35,7 @@ class TypeSerializer(serializers.Serializer):
     name = serializers.CharField(source='type.name', max_length=100)
 
 
-class PokemonSerializer(serializers.Serializer):
+class PokedexPokemonSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField(max_length=100)
     moves = PokemonMoveSerializer(many=True)
