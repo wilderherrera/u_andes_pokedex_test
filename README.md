@@ -69,6 +69,11 @@ Features
 
    The application should now be accessible at http://127.0.0.1:8000/.
 
+# Testing
+   Run unit test:
+    
+   **python manage.py test**
+
 # Usage
 
 - Admin Interface: Access the Django admin interface at http://127.0.0.1:8000/admin/ to manage Pokémon, moves, types, and sprites.
