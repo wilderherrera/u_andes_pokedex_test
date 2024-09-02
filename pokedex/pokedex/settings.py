@@ -27,9 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-azcl%l=5-0=pm=99e4aba8@f(rior9l!a(#d94_23n!cgb4hxm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
 
 # Application definition
 
@@ -40,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pokedex'
+    'pokedex',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -55,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'pokedex.urls'
+
+ALLOWED_HOSTS = ['*']
 
 TEMPLATES = [
     {
@@ -132,3 +133,13 @@ if 'test' in sys.argv or 'test_coverage' in sys.argv:
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+STATIC_URL = '/static/'
+
+# If you have custom static files, define them here
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    # Add more directories as needed
+]
+
+# Directory where collectstatic will collect static files for production
+STATIC_ROOT = BASE_DIR / "staticfiles"
