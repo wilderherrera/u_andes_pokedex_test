@@ -14,7 +14,7 @@ class PokemonViews(APIView):
         self.pokedex_service = PokeApiService()
         self.pokemon_service = PokemonService()
 
-    def get(self, request, pokemon_id=None, pokemon_name=None):
+    def get(self, request, pokemon_id=None):
         if pokemon_id != None:
             return JsonResponse(PokemonSerializer(self.pokemon_service.get_by_id_or_name(pokemon_id)).data)
         limit = request.GET.get('limit', 20)

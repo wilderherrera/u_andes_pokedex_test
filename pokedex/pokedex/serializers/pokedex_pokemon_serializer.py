@@ -38,6 +38,6 @@ class TypeSerializer(serializers.Serializer):
 class PokedexPokemonSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField(max_length=100)
-    moves = PokemonMoveSerializer(many=True)
-    sprites = SpritesSerializer()
-    types = TypeSerializer(many=True)
+    moves = PokemonMoveSerializer(many=True, required=False)
+    sprites = SpritesSerializer(required=False)
+    types = TypeSerializer(many=True, required=False)
