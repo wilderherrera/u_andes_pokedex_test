@@ -24,6 +24,7 @@ Features
 3. Navigate to the project directory:
 
    cd u_andes_pokedex_test
+   cd pokedex
 
 4. Create and activate a virtual environment:
 
@@ -59,16 +60,21 @@ Features
    python manage.py makemigrations
    python manage.py migrate
 
-8. Create a superuser (optional, for admin access):
-
-   python manage.py createsuperuser
-
-9. Run the development server:
+8. Run the development server:
 
    python manage.py runserver
 
    The application should now be accessible at http://127.0.0.1:8000/.
 
+# Swagger
+  
+   You could get api information 
+
+http://localhost:8000/swagger/
+
+![image](https://github.com/user-attachments/assets/d917c96d-04ec-407e-96a3-e6eddd3b1563)
+
+ 
 # Testing
    Run unit test:
     
