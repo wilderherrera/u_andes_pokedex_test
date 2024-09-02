@@ -69,6 +69,15 @@ Features
 
    The application should now be accessible at http://127.0.0.1:8000/.
 
+# Swagger
+  
+   You could get api information 
+
+http://localhost:8000/swagger/
+
+![image](https://github.com/user-attachments/assets/d917c96d-04ec-407e-96a3-e6eddd3b1563)
+
+ 
 # Testing
    Run unit test:
     
