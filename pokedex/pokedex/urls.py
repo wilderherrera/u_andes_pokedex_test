@@ -20,6 +20,5 @@ from pokedex.views.v1.pokemon_views import PokemonViews
 
 urlpatterns = [
     path('api/v1/pokemons', PokemonViews.as_view(), name='pokemon-list'),
-    path('api/v1/pokemons/<int:pokemon_id>', PokemonViews.as_view(), name='pokemon-details-id'),
-    path('api/v1/pokemons/<str:pokemon_name>', PokemonViews.as_view(), name='pokemon-details-name'),
+    path('api/v1/pokemons/<str:pokemon_id>', PokemonViews.as_view(), name='pokemon-details-id'),
 ]
