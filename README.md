@@ -9,6 +9,13 @@ Features
 - Pokémon Management: Create, view, and update Pokémon records.
 - API Integration: Fetch Pokémon data from external APIs and save it to the database.
 
+# Docker initialization
+
+The app could be running using docker running this commands in ./pokedex
+
+        docker-compose build 
+        docker-compose up
+
 # Curl Examples
 
 ### Get all pokemons
