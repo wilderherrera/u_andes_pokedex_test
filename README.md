@@ -9,6 +9,53 @@ Features
 - Pokémon Management: Create, view, and update Pokémon records.
 - API Integration: Fetch Pokémon data from external APIs and save it to the database.
 
+# Docker initialization
+
+The app could be running using docker running this commands in ./pokedex
+
+        docker-compose build 
+        docker-compose up
+
+# Curl Examples
+
+### Get all pokemons
+
+curl --location --request GET 'http://127.0.0.1:8000/api/v1/pokemons' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: csrftoken=j5PlBpZrlfaDlCtHWWmYxLmIArtSjHZo' \
+--data '{
+        "name": "chansey 2"
+    }'
+
+### Get pokemon by name 
+
+curl --location --request GET 'http://127.0.0.1:8000/api/v1/pokemons/bulbasaur' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: csrftoken=j5PlBpZrlfaDlCtHWWmYxLmIArtSjHZo' \
+--data '{
+        "name": "chansey 2"
+    }'
+
+
+### Get pokemon by id
+
+curl --location --request GET 'http://127.0.0.1:8000/api/v1/pokemons/200' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: csrftoken=j5PlBpZrlfaDlCtHWWmYxLmIArtSjHZo' \
+--data '{
+        "name": "chansey 2"
+    }'
+
+### Update pokemon
+
+curl --location --request PATCH 'http://127.0.0.1:8000/api/v1/pokemons/200' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: csrftoken=j5PlBpZrlfaDlCtHWWmYxLmIArtSjHZo' \
+--data '{
+        "name": "chansey 2"
+    }'
+
+
 # Requirements
 
 - Python 3.x
